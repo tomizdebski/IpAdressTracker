@@ -8,12 +8,49 @@
   
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
 
   
 </head>
 <body>
+  <div class="container">
+    <div class="header">
+        <h1 class="name">IP Address Tracker</h1>
+        <input class="search-input" type="text"><button class="search-button">></button>
+    </div>
+    <div class="map">
+      <div id="map">
 
-  IP Address Tracker
+      </div>
+    </div>
+    <div class="float-container">
+      <div class="float-item1">
+        <p class="describe-bold">IP ADRESS</p>
+        <p class="describe ip">test</p>
+      </div>
+      <div class="float-item2">
+        <p class="describe-bold">LOCATION</p>
+        <p class="describe location">test</p>
+      </div>
+      <div class="float-item3">
+        <p class="describe-bold">TIMEZONE</p>
+        <p class="describe timezone">test</p>
+      </div>
+      <div class="float-item4">
+        <p class="describe-bold">ISP</p>
+        <p class="describe isp">test</p>
+      </div>
+    </div>
+    
+    
+
+  </div>
+
 
   Search for any IP address or domain
 
