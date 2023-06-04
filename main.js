@@ -24,8 +24,8 @@ button.addEventListener('click', (e) => {
         .then(res => {
             console.log(res);
             ip.innerText = res.ip;
-            location.innerText = res.location.country + res.location.city;
-            timezone.innerText = res.location.timezone;
+            location.innerText = res.location.country +" "+ res.location.city;
+            timezone.innerText = "UTC " + res.location.timezone;
             isp.innerText = res.isp;
             
             let map = L.map('map').setView([res.location.lat, res.location.lng], 13);
@@ -33,6 +33,8 @@ button.addEventListener('click', (e) => {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
+            let marker = L.marker([res.location.lat, res.location.lng]).addTo(map);
+            marker.bindPopup("<b>Tu jesteś!</b>").openPopup();
 
         });
     }

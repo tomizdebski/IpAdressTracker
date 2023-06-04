@@ -22,9 +22,10 @@ body {
     margin:0;
     font-size:1rem;
     background-color: black;
-    
-   
 }
+
+
+
 .container{
     max-width: 80%;
     margin:60px;
@@ -37,12 +38,19 @@ body {
 .header{
     min-height: 200px;
     background-image: url("../images/pattern-bg-desktop.png");
+    
+}
+.name{
+    padding:20px;
+    font-size: 1rem;
 }
 
 .search-input{
     border-radius: 5px 0px 0px 5px;
+    width: 300px;;
     border: none;
-    padding: 5px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .search-button{
@@ -50,18 +58,20 @@ body {
     border: none;
     background-color: rgb(63,63,63);
     color: white;
-    padding:5px
+    padding:10px;
+    cursor: pointer;
 }
 .map{
     height: 400px;
-    background-color: aquamarine;
+    background-image: url("../images/pattern-bg-desktop.png");
+
     z-index: -1;
 }
 .float-container{
     z-index: 1;
     background-color: white;
-    color: black;
-    height: 50px;
+    color: $darkGray;
+    height: 80px;
     width:600px;
     border-radius: 5px;
     font-size: 0.5rem;
@@ -69,9 +79,9 @@ body {
     justify-content: space-evenly;
     padding:10px;
     position:absolute;
-    top: 225px;
-   
+    top: 210px;
     left: 150px;
+    
 
 
     
@@ -96,11 +106,60 @@ body {
 .describe-bold{
     font-weight: 700;
 }
+.describe{
+    color:black;
+    font-size: 0.8rem;;
+}
 
 #map { 
     height: 400px; 
     z-index:0;
 }
+
+@media (max-width: 700px) {
+    body {
+      background-color: lightgreen;
+    }
+    .container{
+        width: 400px;
+    }
+    .header{
+        width: 400px;
+    }
+    .map{
+        width: 400px;
+        height: 600px;
+    }
+    .float-container{
+        max-width: 330px;
+        height:auto;
+        flex-direction: column;
+        left: 85px;
+    }
+    .float-item1{
+        border-right: none;
+        flex-basis: 100%;
+        
+    }
+    .float-item2{
+        border-right: none; 
+        flex-basis: 100%;
+       
+    }
+    .float-item3{
+        border-right: none;
+        flex-basis: 100%;
+       
+    }
+    .float-item4{
+        flex-basis: 100%;
+         0;
+    }
+    #map { 
+        height: 600px; 
+    }
+  }
+    
 
 
 
